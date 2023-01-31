@@ -1,0 +1,125 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: 16px;
+    @media screen and (min-width: 550px){
+        &{
+            flex-direction: row-reverse;
+            height: 100vh;
+        }
+    }
+    
+}
+.squeeze {
+    &__column {
+        border: solid;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 2.15rem;
+        @media screen and (min-width: 500px){
+            width: 50%;
+            padding: 0 9rem;
+            text-align: inherit;
+        }
+    }
+
+    &__column-logo {
+        display: none;
+        width: 10rem;
+        height: auto;
+        @media screen and (min-width: 550px) {
+                & {
+                    display: block;
+                }
+            }
+        
+    }
+
+    &__head {
+        & img {
+            width: 110px;
+            height: auto;
+            padding: 1.5rem;
+        }
+        @media screen and (min-width: 550px) {
+                & {
+                    display: none;
+                }
+            }
+        
+    }
+
+    &__header {
+        margin: 6rem 1.5rem 1rem 1.5rem;
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 0.9;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+        @media screen and (min-width: 550px) {
+                & {
+                    line-height: 1;
+                    margin-left: 0;
+                }
+            }
+    }
+
+    &__thin-header {
+        font-weight: 100;
+        color: hsl(0, 36%, 70%);
+    }
+
+    &__description {
+        line-height: 1.5;
+        color: hsl(0, 36%, 70%);
+        @media screen and (min-width: 550px) {
+                & {
+                    line-height: 1.75;
+                }
+            }
+    }
+
+    &__input {
+        padding: 1.2rem 1.5rem;
+    }
+}
+
+.lead {
+    
+
+    &__form {
+        width: 200%;
+        border: solid;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        position: relative;
+
+    }
+
+    &__btn {}
+
+    &__error {
+        position: absolute;
+        right: -px;
+    }
+}
+.img {
+    &__column {
+        background: url(../images/hero-mobile.jpg) no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
+        @media screen and (min-width: 550px) {
+                & {
+                    background: url(../images/hero-desktop.jpg) no-repeat;
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+    }
+}
+
+.attribution {}
