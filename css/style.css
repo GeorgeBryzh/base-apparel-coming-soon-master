@@ -12,16 +12,15 @@ body {
 }
 
 .squeeze__column {
-  border: solid;
-  width: 100%;
   text-align: center;
   box-sizing: border-box;
-  padding: 0 2.15rem;
+  padding: 3rem 2.15rem 6rem 2.15rem;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   .squeeze__column {
     width: 50%;
-    padding: 0 9rem;
+    padding: 4rem 9rem;
+    padding-right: 12rem;
     text-align: inherit;
   }
 }
@@ -46,7 +45,7 @@ body {
   }
 }
 .squeeze__header {
-  margin: 6rem 1.5rem 1rem 1.5rem;
+  margin: 4rem 1.5rem 1rem 1.5rem;
   font-size: 3.5rem;
   font-weight: 500;
   line-height: 0.9;
@@ -57,15 +56,16 @@ body {
   .squeeze__header {
     line-height: 1;
     margin-left: 0;
+    margin-top: 7rem;
   }
 }
 .squeeze__thin-header {
   font-weight: 100;
-  color: hsl(0deg, 36%, 70%);
+  color: hsl(0, 36%, 70%);
 }
 .squeeze__description {
   line-height: 1.5;
-  color: hsl(0deg, 36%, 70%);
+  color: hsl(0, 36%, 70%);
 }
 @media screen and (min-width: 550px) {
   .squeeze__description {
@@ -73,32 +73,105 @@ body {
   }
 }
 .squeeze__input {
-  padding: 1.2rem 1.5rem;
+  width: 100%;
+  border: solid;
+  border-color: hsla(0, 36%, 70%, 0.404);
+  border-width: 1px;
+  border-radius: 30px;
+  padding: 0 2rem;
+}
+.squeeze__input::-moz-placeholder {
+  color: hsla(0, 36%, 70%, 0.404);
+  text-transform: capitalize;
+}
+.squeeze__input::placeholder {
+  color: hsla(0, 36%, 70%, 0.404);
+  text-transform: capitalize;
+}
+.squeeze__input:focus {
+  outline: none;
 }
 
 .lead__form {
-  width: 200%;
-  border: solid;
+  width: 100%;
+  height: 50px;
   display: flex;
-  flex-grow: 1;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
   position: relative;
+}
+@media screen and (min-width: 550px) {
+  .lead__form {
+    margin-top: 3rem;
+  }
+}
+.lead__btn {
+  position: absolute;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0 2.2rem;
+  width: 50px;
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0 15px 30px -10px hsl(0, 36%, 70%);
+}
+.lead__btn:hover {
+  background: linear-gradient(135deg, hsl(0, 58%, 89%), hsl(0, 80%, 86%));
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px hsl(0, 29%, 70%);
+}
+@media screen and (min-width: 550px) {
+  .lead__btn {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .lead__btn span {
+    position: relative;
+    left: 2px;
+  }
 }
 .lead__error {
   position: absolute;
-  right: -px;
+  right: 5.5rem;
+  align-self: center;
+}
+@media screen and (min-width: 550px) {
+  .lead__error {
+    right: 7rem;
+  }
+}
+.lead__error-text {
+  position: absolute;
+  font-size: 14px;
+  color: hsl(0, 93%, 68%);
+  left: 2rem;
+  top: 2.8rem;
 }
 
 .img__column {
   background: url(../images/hero-mobile.jpg) no-repeat;
-  background-size: contain;
+  background-size: 100%;
   width: 100%;
   height: 300px;
 }
 @media screen and (min-width: 550px) {
   .img__column {
     background: url(../images/hero-desktop.jpg) no-repeat;
-    width: 50%;
+    width: 600px;
     height: 100%;
   }
+}
+
+.error {
+  border-color: hsl(0, 93%, 68%);
+  border-width: 2px;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

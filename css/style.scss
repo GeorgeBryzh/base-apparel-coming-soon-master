@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     flex-direction: column;
@@ -13,14 +14,13 @@ body{
 }
 .squeeze {
     &__column {
-        border: solid;
-        width: 100%;
         text-align: center;
         box-sizing: border-box;
-        padding: 0 2.15rem;
-        @media screen and (min-width: 500px){
+        padding: 3rem 2.15rem 6rem 2.15rem;
+        @media screen and (min-width: 550px){
             width: 50%;
-            padding: 0 9rem;
+            padding: 4rem 9rem;
+            padding-right: 12rem;
             text-align: inherit;
         }
     }
@@ -52,7 +52,7 @@ body{
     }
 
     &__header {
-        margin: 6rem 1.5rem 1rem 1.5rem;
+        margin: 4rem 1.5rem 1rem 1.5rem;
         font-size: 3.5rem;
         font-weight: 500;
         line-height: 0.9;
@@ -62,6 +62,7 @@ body{
                 & {
                     line-height: 1;
                     margin-left: 0;
+                    margin-top: 7rem;
                 }
             }
     }
@@ -82,44 +83,132 @@ body{
     }
 
     &__input {
-        padding: 1.2rem 1.5rem;
+        width: 100%;
+        border: solid;
+        border-color: hsla(0, 36%, 70%, 0.404);
+        border-width: 1px;
+        border-radius: 30px;
+        padding: 0 2rem;
+
+        &::placeholder {
+            color: hsla(0, 36%, 70%, 0.404);
+            text-transform: capitalize;
+        }
+
+        &:focus{
+           outline: none;
+        }
     }
 }
 
 .lead {
     
-
+    
     &__form {
-        width: 200%;
-        border: solid;
+        width: 100%;
+        height: 50px;
         display: flex;
-        flex-grow: 1;
-        align-items: center;
+        justify-content: space-between;
+        margin-top: 2.5rem;
         position: relative;
+        
 
+        @media screen and (min-width: 550px) {
+            & {
+                margin-top: 3rem;
+            }
+        }
+        
     }
 
-    &__btn {}
+    &__btn {
+        
+        position: absolute;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 0 2.2rem;
+        width: 50px;
+        height: 100%;
+        border-radius: 30px;
+        background: linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+        box-shadow: 0 15px 30px -10px hsl(0, 36%, 70%);
+        &:hover{
+            background: linear-gradient(135deg, hsl(0, 58%, 89%),hsl(0, 80%, 86%));
+            cursor: pointer;
+            box-shadow: 0 20px 25px -5px hsl(0, 29%, 70%);
+        }
+
+        
+        @media screen and (min-width: 550px){
+            &{
+                width: 100px;
+            }
+        }
+
+        & span {
+            @media screen and (min-width: 550px) {
+                    & {
+                        position: relative;
+                        left: 2px;
+                    }
+                }
+            
+        }
+    }
 
     &__error {
         position: absolute;
-        right: -px;
+        right: 5.5rem;
+        align-self: center;
+
+       
+        @media screen and (min-width: 550px){
+            &{
+                right: 7rem;
+            }
+        }
+    }
+
+    &__error-text{
+        position: absolute;
+        font-size: 14px;
+        color: hsl(0, 93%, 68%);
+        left: 2rem;
+        top: 2.8rem;
     }
 }
 .img {
     &__column {
         background: url(../images/hero-mobile.jpg) no-repeat;
-        background-size: contain;
+        background-size: 100%;
         width: 100%;
         height: 300px;
         @media screen and (min-width: 550px) {
                 & {
                     background: url(../images/hero-desktop.jpg) no-repeat;
-                    width: 50%;
+                    width: 600px;
+                    
                     height: 100%;
+                    // border: solid;
                 }
             }
     }
+
 }
 
-.attribution {}
+.attribution {
+    
+}
+
+.error {
+    border-color: hsl(0, 93%, 68%);
+    border-width: 2px;
+}
+
+
+.hide {
+    display: none;
+}
